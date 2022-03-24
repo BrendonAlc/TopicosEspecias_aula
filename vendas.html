@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="" width=devic-width, initial-scale="1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button>Clique aqui</button>
+</body>
+
+<script>
+    // O Javascript fica aqui
+    function criarParagrafo() {
+        let para = document.createElement('p');
+        para.textContent = 'Você clicou no botão!'; //Mensagem para o usuário
+        document.body.appendChild(para); //cria nova linha com a função designada
+    }
+
+    const botoes = document.querySelectorAll('button');
+
+    for (var i = 0; i < botoes.length; i++) { //Cada vez que é clicado no botão é utilizado a função criada "criarParagrafo"
+        botoes[i].addEventListener('click', criarParagrafo);
+    }
+</script>
+
+</html>
